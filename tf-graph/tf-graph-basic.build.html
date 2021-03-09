@@ -1053,4 +1053,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </template>
 </dom-module>
 
-<script src="tf-graph-basic.build.js"></script></body></html>
+<script src="tf-graph-basic.build.js"></script>
+<script>
+function iframe_hook(event){
+  event.target.pbtxt = decodeURI(window.location.hash.substr(1));
+}
+</script>
+<div style="height:600px">
+  <tf-graph-basic onload="iframe_hook"></tf-graph-basic>
+</div>
+  
+</body></html>
