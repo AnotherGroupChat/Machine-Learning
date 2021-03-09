@@ -1054,13 +1054,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </dom-module>
 
 <script src="tf-graph-basic.build.js"></script>
+<div style="height:600px">
+  <tf-graph-basic id="custom-graph"></tf-graph-basic>
+</div>
 <script>
-function iframe_hook(event){
-  event.target.pbtxt = atob(decodeURI(window.location.hash.substr(1)));
+window.onload = (event)=>{
+  document.getElementById("custom-graph").pbtxt = atob(decodeURI(window.location.hash.substr(1)));
 }
 </script>
-<div style="height:600px">
-  <tf-graph-basic onload="iframe_hook"></tf-graph-basic>
-</div>
-  
 </body></html>
