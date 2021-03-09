@@ -1056,7 +1056,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <script src="tf-graph-basic.build.js"></script>
 <script>
 function iframe_hook(event){
-  event.target.pbtxt = decodeURI(window.location.hash.substr(1));
+  event.target.pbtxt = atob(decodeURI(window.location.hash.substr(1)));
 }
 </script>
 <div style="height:600px">
